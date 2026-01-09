@@ -248,12 +248,12 @@ const renderSection = () => {
         u.memberId?.toLowerCase().includes(state.filters.users.query.toLowerCase())
       )
       return `
-  < div class="content-card" style = "margin-bottom: 2rem; padding: 1.5rem;" >
+  <div class="content-card" style="margin-bottom: 2rem; padding: 1.5rem;">
     <div class="form-group" style="margin-bottom: 0;">
       <label>Search User Base</label>
       <input type="text" id="user-search" value="${state.filters.users.query}" placeholder="Search by name or Member ID..." style="max-width: 400px;">
     </div>
-        </div >
+        </div>
   <div class="table-container">
     <table>
       <thead>
@@ -282,7 +282,7 @@ const renderSection = () => {
 `
     case 'members':
       return `
-  < div style = "display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem;" >
+  <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem;">
           <div class="content-card">
             <h2 style="font-size: 1.25rem; margin-bottom: 1rem;">Internal Enrollment</h2>
             <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 2rem; font-weight: 500;">Pre-authorize system access for new faculty and members.</p>
@@ -333,7 +333,7 @@ const renderSection = () => {
               </tbody>
             </table>
           </div>
-        </div >
+        </div>
   `
     case 'transactions':
       const filteredTransactions = state.transactions.filter(t => {
@@ -345,7 +345,7 @@ const renderSection = () => {
       })
 
       return `
-  < div class="content-card" style = "margin-bottom: 2rem; padding: 1.5rem;" >
+  <div class="content-card" style="margin-bottom: 2rem; padding: 1.5rem;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
       <div class="form-group" style="margin-bottom: 0;">
         <label>Operation Type</label>
@@ -368,7 +368,7 @@ const renderSection = () => {
         <input type="text" id="filter-member" value="${state.filters.transactions.memberId}" placeholder="Enter member ID...">
       </div>
     </div>
-        </div >
+        </div>
   <div class="table-container">
     <table>
       <thead>
@@ -420,7 +420,7 @@ const renderSection = () => {
 `
     case 'loans':
       return `
-  < div class="table-container" >
+  <div class="table-container">
     <table>
       <thead>
         <tr>
@@ -456,10 +456,10 @@ const renderSection = () => {
         ${state.loans.length === 0 ? '<tr><td colspan="6" style="text-align: center; padding: 2rem;">No loan requests found.</td></tr>' : ''}
       </tbody>
     </table>
-        </div >
+  </div>
   `
     default:
-      return `< p > Content for ${state.currentView} is coming soon...</p > `
+      return `<p>Content for ${state.currentView} is coming soon...</p>`
   }
 }
 
@@ -896,7 +896,7 @@ const renderChangePasswordModal = () => {
   const modal = document.createElement('div')
   modal.className = 'modal-overlay open'
   modal.innerHTML = `
-  < div class="modal-card" >
+  <div class="modal-card">
       <h2 style="margin-bottom: 1.5rem;">Change Password</h2>
       <form id="change-password-form">
         <div class="form-group">
@@ -913,7 +913,7 @@ const renderChangePasswordModal = () => {
           <button type="submit" class="btn btn-primary" style="flex: 1;">Update</button>
         </div>
       </form>
-    </div >
+    </div>
   `
   document.body.appendChild(modal)
 
